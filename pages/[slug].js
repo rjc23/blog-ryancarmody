@@ -1,17 +1,12 @@
 import React, { useEffect } from "react";
 import Header from "../components/Header/Header";
-import axios from "axios";
 import { serialize } from "next-mdx-remote/serialize";
 import hljs from "highlight.js";
 import "highlight.js/styles/devibeans.css"; // import your preferred style
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote";
-import { ApolloClient, InMemoryCache, gql, useQuery } from "@apollo/client";
-import {
-  getIndividualPost,
-  GET_ALL_SLUGS,
-  GET_INDIVIDUAL_POST,
-} from "./../graphql/queries";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { GET_ALL_SLUGS, GET_INDIVIDUAL_POST } from "./../graphql/queries";
 
 const client = new ApolloClient({
   uri: "https://damp-ridge-83493.herokuapp.com/graphql",

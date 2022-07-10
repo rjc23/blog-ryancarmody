@@ -1,7 +1,4 @@
-import axios from "axios";
 import Head from "next/head";
-import PropTypes from "prop-types";
-import { useEffect } from "react";
 import Header from "../components/Header/Header";
 import Banner from "../components/Banner/Banner";
 import BlogContent from "../components/BlogContent/BlogContent";
