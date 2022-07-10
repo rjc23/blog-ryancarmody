@@ -42,14 +42,14 @@ function Post({ heading, content }) {
       <Header />
       <article>
         <h1>{heading}</h1>
-        <MDXRemote {...content} components={components} />
+        <MDXRemote {...content} />
       </article>
     </div>
   );
 }
 
 export async function getStaticProps({ params }) {
-  const { loading, error, data } = await client.query({
+  const { data } = await client.query({
     query: GET_INDIVIDUAL_POST,
     variables: { slugUrl: params.slug },
   });
