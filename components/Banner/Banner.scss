@@ -1,0 +1,19 @@
+.banner {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .banner__blog {
+        background: -webkit-linear-gradient(315deg,#f87575 25%,#647eff);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .banner__image {
+        img {
+            // border: solid 2px black !important;
+            background-color: #E5E7EB;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+    }
+}

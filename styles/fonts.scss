@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+h1 {
+    font-family: Inter, 'sans-serif';
+    font-weight: 900;
+    font-size: 48px;
+}
+h2 {
+    font-family: Inter, 'sans-serif';
+    font-weight: 900;
+    font-size: 30px;
+}
+h3 {
+    font-family: Inter, 'sans-serif';
+    font-weight: 900;
+    font-size: 28px;
+}
+h4 {
+    font-family: Inter, 'sans-serif';
+    font-weight: 900;
+    font-size: 24px;
+}
+h5 {
+    font-family: Inter, 'sans-serif';
+    font-weight: 900;
+    font-size: 20px;
+}
+h6 {
+    font-family: Inter, 'sans-serif';
+    font-weight: 900;
+    font-size: 16px;
+}
+a, p, button {
+    font-family: Inter, 'sans-serif';
+    font-weight: 400;
+    font-size: 16px;
+}
+.a-button {
+    padding: 0.5rem;
+    margin: auto;
+    border-radius: 0.5rem;
+
+}
+a {
+    cursor: pointer;
+}
