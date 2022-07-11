@@ -7,7 +7,7 @@ function BlogContent() {
       <h2>I write about three topics</h2>
       <div className="flex gap-4 flex-col md:flex-row mt-6">
         <div className="dev transform hover:scale-[1.01] transition-all rounded-xl w-full md:w-1/3 bg-gradient-to-r p-1 from-[#F96167] to-[#FCE77D]">
-          <Link href="/post">
+          <Link href="/dev">
             <a className="flex flex-col h-full bg-white dark:bg-gray-900 rounded-lg p-4">
               <h4>DEV</h4>
               <p className="mb-6">

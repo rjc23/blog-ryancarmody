@@ -2,8 +2,10 @@
 @import './common.scss';
 @import './fonts.scss';
 @import './colors.scss';
+@import './post.scss';
 
 // Component stylesheets
 @import './components/Header/Header.scss';
 @import './components/Banner/Banner.scss';
 @import './components/BlogContent/BlogContent.scss';
+@import './components/Author/Author.scss';

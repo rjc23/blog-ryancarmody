@@ -17,12 +17,25 @@ const GET_INDIVIDUAL_POST = gql`
     blogPosts(filters: { urlSlug: { eq: $slugUrl } }) {
       data {
         attributes {
-          Heading
-          Content
+          heading
+          content
+          createdAt
         }
       }
     }
   }
 `;
 
-export { GET_ALL_SLUGS, GET_INDIVIDUAL_POST };
+const GET_LATEST_POSTS = gql`
+  query {
+    blogPosts {
+      data {
+        attributes {
+          heading
+        }
+      }
+    }
+  }
+`;
+
+export { GET_ALL_SLUGS, GET_INDIVIDUAL_POST, GET_LATEST_POSTS };

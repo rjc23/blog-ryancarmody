@@ -12,6 +12,17 @@ html, body {
     margin: auto;
 }
 
+.stack {
+    display: flex;
+    flex-direction: column;
+}
+.gap24 {
+    gap: 8px;
+}
+.gap48 {
+    gap: 48px;
+}
+
 code {
     border-radius: 8px;
     border: solid 1px gray;

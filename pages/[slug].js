@@ -7,13 +7,14 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { GET_ALL_SLUGS, GET_INDIVIDUAL_POST } from "./../graphql/queries";
+import Author from "../components/Author/Author";
 
 const client = new ApolloClient({
   uri: "https://damp-ridge-83493.herokuapp.com/graphql",
   cache: new InMemoryCache(),
 });
 
-function Post({ heading, content }) {
+function Post({ heading, content, date }) {
   const components = {
     img: (props) => (
       // eslint-disable-next-line jsx-a11y/alt-text
@@ -40,7 +41,8 @@ function Post({ heading, content }) {
   return (
     <div>
       <Header />
-      <article>
+      <article className="post">
+        <Author name="Ryan Carmody" date={date} />
         <h1>{heading}</h1>
         <MDXRemote {...content} />
       </article>
@@ -54,12 +56,14 @@ export async function getStaticProps({ params }) {
     variables: { slugUrl: params.slug },
   });
 
-  const content = await serialize(data.blogPosts.data[0].attributes.Content);
+  const attrs = data.blogPosts.data[0].attributes;
+  const content = await serialize(data.blogPosts.data[0].attributes.content);
 
   return {
     props: {
-      heading: data.blogPosts.data[0].attributes.Heading,
+      heading: attrs.heading,
       content: content,
+      date: attrs.createdAt,
     },
   };
 }
