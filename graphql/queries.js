@@ -27,11 +27,13 @@ const GET_INDIVIDUAL_POST = gql`
 `;
 
 const GET_LATEST_POSTS = gql`
-  query {
-    blogPosts {
+  query ($type: String!) {
+    blogPosts(filters: { type: { eq: $type } }) {
       data {
         attributes {
           heading
+          description
+          urlSlug
         }
       }
     }

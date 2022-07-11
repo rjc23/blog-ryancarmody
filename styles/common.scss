@@ -16,11 +16,20 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-.gap24 {
-    gap: 8px;
-}
 .gap48 {
     gap: 48px;
+}
+.gap24 {
+    gap: 24px;
+}
+.gap16 {
+    gap: 16px;
+}
+.gap8 {
+    gap: 8px;
+}
+.gap4 {
+    gap: 4px;
 }
 
 code {
