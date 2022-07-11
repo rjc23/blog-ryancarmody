@@ -20,6 +20,7 @@ const GET_INDIVIDUAL_POST = gql`
           heading
           content
           createdAt
+          minsToRead
         }
       }
     }
@@ -34,6 +35,8 @@ const GET_LATEST_POSTS = gql`
           heading
           description
           urlSlug
+          createdAt
+          minsToRead
         }
       }
     }

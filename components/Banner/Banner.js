@@ -11,7 +11,7 @@ function Banner() {
           </span>
           ryancarmody
         </h1>
-        <p className="text-gray-200 dark:text-gray-200">
+        <p className="text-gray-800 dark:text-gray-200">
           Web Developer, Computer Science Tutor
         </p>
         <p className="text-sm text-gray-600 dark:text-gray-400">

@@ -2,6 +2,7 @@ import { useTheme } from "next-themes";
 import React, { useEffect } from "react";
 import { MoonIcon, SunIcon } from "@heroicons/react/solid";
 import { useState, userEffect } from "react";
+import Link from "next/link";
 
 function Header() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -36,9 +37,11 @@ function Header() {
   return (
     <div className="header">
       <nav>
-        <a className="a-button hover:bg-gray-200 dark:hover:bg-gray-800">
-          Home
-        </a>
+        <Link href="/">
+          <a className="a-button hover:bg-gray-200 dark:hover:bg-gray-800">
+            Home
+          </a>
+        </Link>
         <a className="a-button hover:bg-gray-200 dark:hover:bg-gray-800">
           About
         </a>

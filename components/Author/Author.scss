@@ -2,7 +2,21 @@
     display: flex;
     gap: 30px;
     align-items: center;
-    img {
-        border-radius: 100%;
+    justify-content: space-between;
+    .left {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        img {
+            border-radius: 100%;
+        }
+    }
+    .right {
+        display: flex;
+        gap: 12px;
+        svg {
+            width: 25px;
+            height: 25px;
+        }
     }
 }

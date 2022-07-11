@@ -14,7 +14,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function Post({ heading, content, date }) {
+function Post({ heading, content, date, minsToRead }) {
   const components = {
     img: (props) => (
       // eslint-disable-next-line jsx-a11y/alt-text
@@ -42,7 +42,7 @@ function Post({ heading, content, date }) {
     <div>
       <Header />
       <article className="post">
-        <Author name="Ryan Carmody" date={date} />
+        <Author name="Ryan Carmody" date={date} minsToRead={minsToRead} />
         <h1>{heading}</h1>
         <MDXRemote {...content} />
       </article>
@@ -64,6 +64,7 @@ export async function getStaticProps({ params }) {
       heading: attrs.heading,
       content: content,
       date: attrs.createdAt,
+      minsToRead: attrs.minsToRead,
     },
   };
 }

@@ -11,16 +11,15 @@ const client = new ApolloClient({
 
 function index({ posts }) {
   return (
-    <div className="code">
+    <div className="life">
       <Header />
       <div className="stack gap48">
         <div className="stack gap8 items-start">
-          <h1>Code</h1>
+          <h1>Life</h1>
           <p>
-            Here you can find articles about everything web dev. &apos;I like to
-            write how to&apos;s&apos; about specific topics e.g. Angular 2+,
-            Next.js, Heroku etc, as well as broader topics about the life of a
-            web developer.
+            Everything related to whats going on in my life. This might include
+            articles about the sports I play, my hobbies, holidays I take, jobs
+            I apply for etc.
           </p>
         </div>
         <div className="stack gap16">
@@ -59,7 +58,7 @@ function index({ posts }) {
 export async function getStaticProps() {
   const { data } = await client.query({
     query: GET_LATEST_POSTS,
-    variables: { type: "code" },
+    variables: { type: "life" },
   });
 
   return {
