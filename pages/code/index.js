@@ -3,10 +3,10 @@ import Header from "../../components/Header/Header";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { GET_LATEST_POSTS } from "../../graphql/queries";
 
-const client = new ApolloClient({
-  uri: "https://damp-ridge-83493.herokuapp.com/graphql",
-  cache: new InMemoryCache(),
-});
+// const client = new ApolloClient({
+//   uri: "https://damp-ridge-83493.herokuapp.com/graphql",
+//   cache: new InMemoryCache(),
+// });
 
 function index() {
   return (
@@ -28,20 +28,20 @@ function index() {
   );
 }
 
-export async function getStaticProps() {
-  const { data } = await client.query({
-    query: GET_LATEST_POSTS,
-  });
+// export async function getStaticProps() {
+//   const { data } = await client.query({
+//     query: GET_LATEST_POSTS,
+//   });
 
-  const attrs = data.blogPosts.data[0].attributes;
+//   const attrs = data.blogPosts.data[0].attributes;
 
-  return {
-    props: {
-      heading: attrs.Heading,
-      content: content,
-      date: attrs.createdAt,
-    },
-  };
-}
+//   return {
+//     props: {
+//       heading: attrs.Heading,
+//       content: content,
+//       date: attrs.createdAt,
+//     },
+//   };
+// }
 
 export default index;
