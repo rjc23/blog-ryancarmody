@@ -22,7 +22,6 @@ function Banner() {
           src="/images/me.png"
           alt="An image of Ryan, the author of this blog"
           layout="fill"
-          objectFit="cover"
         />
       </div>
     </div>
