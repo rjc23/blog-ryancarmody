@@ -16,10 +16,7 @@ function Author({ name, date, minsToRead }) {
         />
         <div className="info">
           <p>
-            <b>{name}</b> &nbsp;·&nbsp;&nbsp;
-            <span className="text-sm text-gray-600 dark:text-gray-400">
-              Web Developer
-            </span>
+            <b>{name}</b>
           </p>
           <p className="text-sm text-green-600 dark:text-green-300">
             {minsToRead} mins &nbsp;·&nbsp; {createdAt}
@@ -28,7 +25,7 @@ function Author({ name, date, minsToRead }) {
       </div>
       <div className="right">
         <Link href="https://github.com/rjc23">
-          <a target="_blank">
+          <a target="_blank" className="github">
             <svg
               className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white fill-current hover:scale-[1.1]"
               xmlns="http://www.w3.org/2000/svg"

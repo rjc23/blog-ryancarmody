@@ -3,12 +3,14 @@
 @import './fonts.scss';
 @import './colors.scss';
 @import './post.scss';
+@import './breakpoints.scss';
 
 // Component stylesheets
 @import './components/Header/Header.scss';
 @import './components/Banner/Banner.scss';
 @import './components/BlogContent/BlogContent.scss';
 @import './components/Author/Author.scss';
+@import './components/Contents/Contents.scss';
 
 // Pages stylesheets
 @import './../pages/code/code.scss';

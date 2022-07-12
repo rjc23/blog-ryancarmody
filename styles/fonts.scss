@@ -14,9 +14,9 @@ h3 {
     font-size: 20px;
 }
 h4 {
-    font-family: Inter, 'sans-serif';
+    font-family: 'IBM Plex Sans', 'sans-serif';
     font-weight: 900;
-    font-size: 24px;
+    font-size: 18px;
 }
 h5 {
     font-family: Inter, 'sans-serif';
@@ -30,8 +30,11 @@ h6 {
 }
 a, p, button {
     font-family: 'IBM Plex Sans', 'sans-serif';
-    font-weight: 200;
+    font-weight: 400;
     font-size: 16px;
+    &strong {
+        font-weight: 600;
+    }
 }
 .a-button {
     padding: 0.5rem;

@@ -1493,6 +1493,11 @@
     "call-bind" "^1.0.2"
     "get-intrinsic" "^1.1.1"
 
+"github-slugger@^1.1.1":
+  "integrity" "sha512-w0dzqw/nt51xMVmlaV1+JRzN+oCa1KfcgGEWhxUG16wbdA+Xnt/yoFO8Z8x/V82ZcZ0wy6ln9QDup5avbhiDhQ=="
+  "resolved" "https://registry.npmjs.org/github-slugger/-/github-slugger-1.4.0.tgz"
+  "version" "1.4.0"
+
 "glob-parent@^5.1.2":
   "integrity" "sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow=="
   "resolved" "https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz"
@@ -1615,6 +1620,18 @@
   dependencies:
     "function-bind" "^1.1.1"
 
+"hast-util-has-property@^2.0.0":
+  "integrity" "sha512-4Qf++8o5v14us4Muv3HRj+Er6wTNGA/N9uCaZMty4JWvyFKLdhULrv4KE1b65AthsSO9TXSZnjuxS8ecIyhb0w=="
+  "resolved" "https://registry.npmjs.org/hast-util-has-property/-/hast-util-has-property-2.0.0.tgz"
+  "version" "2.0.0"
+
+"hast-util-heading-rank@^2.0.0":
+  "integrity" "sha512-w+Rw20Q/iWp2Bcnr6uTrYU6/ftZLbHKhvc8nM26VIWpDqDMlku2iXUVTeOlsdoih/UKQhY7PHQ+vZ0Aqq8bxtQ=="
+  "resolved" "https://registry.npmjs.org/hast-util-heading-rank/-/hast-util-heading-rank-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "@types/hast" "^2.0.0"
+
 "hast-util-to-estree@^1.4.0":
   "integrity" "sha512-CiOAIESUKkSOcYbvTth9+yM28z5ArpsYqxWc7LWJxOx975WRUBDjvVuuzZR2o09BNlkf7bp8G2GlOHepBRKJ8Q=="
   "resolved" "https://registry.npmjs.org/hast-util-to-estree/-/hast-util-to-estree-1.4.0.tgz"
@@ -1649,6 +1666,13 @@
     "style-to-object" "^0.3.0"
     "unist-util-position" "^4.0.0"
     "zwitch" "^2.0.0"
+
+"hast-util-to-string@^2.0.0":
+  "integrity" "sha512-02AQ3vLhuH3FisaMM+i/9sm4OXGSq1UhOOCpTLLQtHdL3tZt7qil69r8M8iDkZYyC0HCFylcYoP+8IO7ddta1A=="
+  "resolved" "https://registry.npmjs.org/hast-util-to-string/-/hast-util-to-string-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "@types/hast" "^2.0.0"
 
 "hast-util-whitespace@^1.0.0":
   "integrity" "sha512-I5GTdSfhYfAPNztx2xJRQpG8cuDSNt599/7YUn7Gx/WxNMsG+a835k97TDkFgk123cwjfwINaZknkKkphx/f2A=="
@@ -2953,6 +2977,19 @@
   dependencies:
     "image-size" "^0.9.3"
     "unist-util-visit" "^2.0.3"
+
+"rehype-slug@^5.0.1":
+  "integrity" "sha512-X5v3wV/meuOX9NFcGhJvUpEjIvQl2gDvjg3z40RVprYFt7q3th4qMmYLULiu3gXvbNX1ppx+oaa6JyY1W67pTA=="
+  "resolved" "https://registry.npmjs.org/rehype-slug/-/rehype-slug-5.0.1.tgz"
+  "version" "5.0.1"
+  dependencies:
+    "@types/hast" "^2.0.0"
+    "github-slugger" "^1.1.1"
+    "hast-util-has-property" "^2.0.0"
+    "hast-util-heading-rank" "^2.0.0"
+    "hast-util-to-string" "^2.0.0"
+    "unified" "^10.0.0"
+    "unist-util-visit" "^4.0.0"
 
 "remark-mdx@^2.0.0":
   "integrity" "sha512-npQagPdczPAv0xN9F8GSi5hJfAe/z6nBjylyfOfjLOmz086ahWrIjlk4BulRfNhA+asutqWxyuT3DFVsxiTVHA=="

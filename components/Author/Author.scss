@@ -13,10 +13,16 @@
     }
     .right {
         display: flex;
+        flex-direction: row;
         gap: 12px;
         svg {
             width: 25px;
             height: 25px;
+        }
+        @include respond-to(xs) {
+            .github {
+                display: none;
+            }
         }
     }
 }

@@ -21,6 +21,13 @@ const GET_INDIVIDUAL_POST = gql`
           content
           createdAt
           minsToRead
+          heroImage {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
         }
       }
     }
