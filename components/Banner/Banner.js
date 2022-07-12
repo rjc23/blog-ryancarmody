@@ -9,7 +9,7 @@ function Banner() {
           <span className="text-6xl banner__blog drop-shadow-lg shadow-black">
             BLOG.
           </span>
-          ryancarmody
+          <span className="banner__ryan">ryancarmody</span>
         </h1>
         <p className="">Web Developer, Computer Science Tutor</p>
         <p className="mt-4 text-gray-600 dark:text-gray-400">
@@ -21,8 +21,7 @@ function Banner() {
         <Image
           src="/images/me.png"
           alt="An image of Ryan, the author of this blog"
-          width={150}
-          height={150}
+          layout="fill"
           objectFit="cover"
         />
       </div>

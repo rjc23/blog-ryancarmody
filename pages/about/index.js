@@ -20,7 +20,7 @@ function About() {
         </p>
         <br />
         <p>
-          In early 2022 I quit my job and took a job tutoring at my local
+          In early 2022, I quit my job and took a job tutoring at my local
           university. I can now say, I seriously LOVE tutoring. I really enjoy
           building meaningful relationships with students and seeing them
           develop their coding skills. Also, since I started tutoring, I have
@@ -33,8 +33,8 @@ function About() {
         </p>
         <br />
         <p>
-          For now, I will continue tutoring, continue creating things and
-          learning new skills, and am also on the hunt for some freelance work.
+          For now, I will continue tutoring, creating and learning new skills,
+          and am also on the hunt for some freelance work.
         </p>
         <br />
         <p>

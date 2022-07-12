@@ -8,12 +8,30 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    .banner__ryan {
+        @include respond-to(xs) {
+            margin-top: -24px;
+            display: block;
+        }
+    }
     .banner__image {
+        width: 150px;
+        height: 150px;
         img {
             // border: solid 2px black !important;
             background-color: #E5E7EB;
             border-radius: 100%;
             overflow: hidden;
         }
+        @include respond-to(xs) {
+            width: 125px;
+            height: 125px;
+            margin-bottom: 12px;
+        }
+    }
+
+    @include respond-to(xs) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
     }
 }

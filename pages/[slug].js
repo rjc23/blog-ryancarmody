@@ -18,19 +18,7 @@ const client = new ApolloClient({
 
 function Post({ heading, content, date, minsToRead, heroImage }) {
   const [contents, setUserContents] = useState([]);
-
-  const components = {
-    img: (props) => (
-      // eslint-disable-next-line jsx-a11y/alt-text
-      <Image
-        {...props}
-        layout="responsive"
-        loading="lazy"
-        width={100}
-        height={100}
-      />
-    ),
-  };
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
     updateCodeSyntaxHighlighting();
@@ -39,8 +27,10 @@ function Post({ heading, content, date, minsToRead, heroImage }) {
 
   useEffect(() => {
     const h3Tags = document.querySelectorAll("h3");
-    console.log(h3Tags);
-    setUserContents(h3Tags);
+    if (h3Tags.length > 0) {
+      setUserContents(h3Tags);
+      setShowContent(true);
+    }
   }, []);
 
   const updateCodeSyntaxHighlighting = () => {
@@ -64,7 +54,7 @@ function Post({ heading, content, date, minsToRead, heroImage }) {
         {heroImage !== "" && (
           <Image src={heroImage} width={300} height={300} alt="Hero image" />
         )}
-        <Contents h2Elements={contents} />
+        {showContent && <Contents h2Elements={contents} />}
         <div className="content">
           <MDXRemote {...content} />
         </div>
