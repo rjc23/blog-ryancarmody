@@ -31,7 +31,7 @@ function BlogContent() {
         <div className="shadow-xl dev transform hover:scale-[1.01] transition-all rounded-xl w-full md:w-1/3 bg-gradient-to-r p-1 from-[#89ABE3FF] to-[#EA738DFF]">
           <a className="flex flex-col h-full bg-white dark:bg-gray-900 rounded-lg p-4">
             <h4>MISC</h4>
-            <p>
+            <p className="mb-6">
               Just random things that come into my head that I have decided to
               write down.
             </p>
