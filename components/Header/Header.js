@@ -42,12 +42,11 @@ function Header() {
             Home
           </a>
         </Link>
-        <a className="a-button hover:bg-gray-200 dark:hover:bg-gray-800">
-          About
-        </a>
-        <a className="a-button hover:bg-gray-200 dark:hover:bg-gray-800">
-          Contact
-        </a>
+        <Link href="/about">
+          <a className="a-button hover:bg-gray-200 dark:hover:bg-gray-800">
+            About
+          </a>
+        </Link>
       </nav>
       <button
         aria-label="Toggle Dark Mode"

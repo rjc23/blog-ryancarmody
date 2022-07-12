@@ -61,7 +61,7 @@ function Post({ heading, content, date, minsToRead, heroImage }) {
       <article className="post">
         <Author name="Ryan Carmody" date={date} minsToRead={minsToRead} />
         <h1>{heading}</h1>
-        <Image src={heroImage} width={300} height={300} />
+        <Image src={heroImage} width={300} height={300} alt="Hero image" />
         <Contents h2Elements={contents} />
         <div className="content">
           <MDXRemote {...content} />
