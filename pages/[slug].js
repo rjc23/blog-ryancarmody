@@ -61,7 +61,9 @@ function Post({ heading, content, date, minsToRead, heroImage }) {
       <article className="post">
         <Author name="Ryan Carmody" date={date} minsToRead={minsToRead} />
         <h1>{heading}</h1>
-        <Image src={heroImage} width={300} height={300} alt="Hero image" />
+        {heroImage !== "" && (
+          <Image src={heroImage} width={300} height={300} alt="Hero image" />
+        )}
         <Contents h2Elements={contents} />
         <div className="content">
           <MDXRemote {...content} />
@@ -95,7 +97,9 @@ export async function getStaticProps({ params }) {
       content: content,
       date: attrs.createdAt,
       minsToRead: attrs.minsToRead,
-      heroImage: attrs.heroImage.data.attributes.url,
+      heroImage: attrs.heroImage?.data
+        ? attrs.heroImage.data.attributes.url
+        : "",
     },
   };
 }
