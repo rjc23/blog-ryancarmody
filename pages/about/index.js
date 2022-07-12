@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,6 +7,9 @@ import Header from "../../components/Header/Header";
 function About() {
   return (
     <div className="about">
+      <Head>
+        <title>About | BLOG.ryancarmody</title>
+      </Head>
       <Header />
       <h1>Hi, I&apos;m Ryan Carmody 👋</h1>
       <div className="about-content">

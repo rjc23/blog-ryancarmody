@@ -10,15 +10,26 @@ import { GET_ALL_SLUGS, GET_INDIVIDUAL_POST } from "./../graphql/queries";
 import Author from "../components/Author/Author";
 import rehypeSlug from "rehype-slug";
 import Contents from "../components/Contents/Contents";
+import Head from "next/head";
 
 const client = new ApolloClient({
   uri: "https://damp-ridge-83493.herokuapp.com/graphql",
   cache: new InMemoryCache(),
 });
 
-function Post({ heading, content, date, minsToRead, heroImage }) {
+function Post({
+  heading,
+  content,
+  date,
+  minsToRead,
+  heroImage,
+  description,
+  tags,
+  socialImage,
+}) {
   const [contents, setUserContents] = useState([]);
   const [showContent, setShowContent] = useState(false);
+  const [url, setUrl] = useState("");
 
   useEffect(() => {
     updateCodeSyntaxHighlighting();
@@ -31,11 +42,13 @@ function Post({ heading, content, date, minsToRead, heroImage }) {
       setUserContents(h3Tags);
       setShowContent(true);
     }
+    setUrl(window.location.href);
+    console.log(window.location.href);
   }, []);
 
   const updateCodeSyntaxHighlighting = () => {
     document.querySelectorAll("pre code").forEach((block) => {
-      hljs.highlightBlock(block);
+      hljs.highlightElement(block);
     });
   };
 
@@ -47,6 +60,20 @@ function Post({ heading, content, date, minsToRead, heroImage }) {
 
   return (
     <div>
+      <Head>
+        <title>{heading} | BLOG.ryancarmody</title>
+        <meta name="description" content={description}></meta>
+        <meta name="author" content="Ryan Carmody"></meta>
+        <meta name="keywords" content={tags}></meta>
+        <meta
+          content="width=device-width, initial-scale=1"
+          name="viewport"
+        ></meta>
+        <meta property="og:title" content={heading} />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:type" content="article" />
+      </Head>
       <Header />
       <article className="post">
         <Author name="Ryan Carmody" date={date} minsToRead={minsToRead} />
@@ -86,8 +113,13 @@ export async function getStaticProps({ params }) {
       heading: attrs.heading,
       content: content,
       date: attrs.createdAt,
+      description: attrs.description,
+      tags: attrs.tags,
       minsToRead: attrs.minsToRead,
       heroImage: attrs.heroImage?.data
+        ? attrs.heroImage.data.attributes.url
+        : "",
+      socialImage: attrs.socialImage?.data
         ? attrs.heroImage.data.attributes.url
         : "",
     },
