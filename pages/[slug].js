@@ -120,7 +120,7 @@ export async function getStaticProps({ params }) {
         ? attrs.heroImage.data.attributes.url
         : "",
       socialImage: attrs.socialImage?.data
-        ? attrs.heroImage.data.attributes.url
+        ? attrs.socialImage.data.attributes.url
         : "",
     },
   };
