@@ -2,11 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "damp-ridge-83493.herokuapp.com",
-      "blog-ryancarmody.vercel.app",
-      "ryancarmody-blog.s3.amazonaws.com",
-    ],
+    domains: ["ryancarmody-blog.s3.amazonaws.com"],
   },
 };
 

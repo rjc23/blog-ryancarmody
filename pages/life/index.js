@@ -7,7 +7,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 const client = new ApolloClient({
-  uri: "https://damp-ridge-83493.herokuapp.com/graphql",
+  uri: process.env.CMS_HOST,
   cache: new InMemoryCache(),
 });
 
