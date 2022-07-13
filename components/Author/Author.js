@@ -15,9 +15,7 @@ function Author({ name, date, minsToRead }) {
           height={50}
         />
         <div className="info">
-          <p>
-            <b>{name}</b>
-          </p>
+          <p>{name}</p>
           <p className="text-sm text-green-600 dark:text-green-300">
             {minsToRead} mins &nbsp;·&nbsp; {createdAt}
           </p>

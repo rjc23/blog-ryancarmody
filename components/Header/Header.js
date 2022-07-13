@@ -10,12 +10,11 @@ function Header() {
 
   useEffect(() => {
     setMounted(true);
-    setTheme("dark");
-  }, [setTheme]);
+  }, []);
 
   const renderThemeChanger = () => {
     if (!mounted) return null;
-    const currentTheme = theme;
+    const currentTheme = theme === "system" ? systemTheme : theme;
     if (currentTheme === "dark") {
       return (
         <SunIcon
