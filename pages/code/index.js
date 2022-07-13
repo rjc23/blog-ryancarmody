@@ -18,7 +18,7 @@ function index({ posts }) {
         <title>Code | BLOG.ryancarmody</title>
         <meta
           name="description"
-          content="A blog by Ryan Carmody, Web Developer and Computer Science Tutor"
+          content="Here you can find articles about everything web dev. I like to write 'how to's' about specific topics e.g. Angular 2+, Next.js, Heroku etc, as well as broader topics about the life of a web developer."
         />
       </Head>
       <Header />

@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { GET_LATEST_POSTS } from "../../graphql/queries";
 import Link from "next/link";
+import Head from "next/head";
 
 const client = new ApolloClient({
   uri: "https://damp-ridge-83493.herokuapp.com/graphql",
@@ -13,6 +14,15 @@ const client = new ApolloClient({
 function index({ posts }) {
   return (
     <div className="life">
+      <Head>
+        <title>Life | BLOG.ryancarmody</title>
+        <meta
+          name="description"
+          content="Everything related to whats going on in my life. This might include
+            articles about the sports I play, my hobbies, holidays I take, jobs
+            I apply for etc."
+        />
+      </Head>
       <Header />
       <div className="stack gap48">
         <div className="stack gap8 items-start">
