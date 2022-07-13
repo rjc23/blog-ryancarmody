@@ -12,16 +12,12 @@ const client = new ApolloClient({
 
 function index({ posts }) {
   return (
-    <div className="life">
+    <div className="misc">
       <Header />
       <div className="stack gap48">
         <div className="stack gap8 items-start">
-          <h1>Life</h1>
-          <p>
-            Everything related to whats going on in my life. This might include
-            articles about the sports I play, my hobbies, holidays I take, jobs
-            I apply for etc.
-          </p>
+          <h1>Misc</h1>
+          <p>Had a random thought about something, wrote about it here.</p>
         </div>
         <div className="stack gap16">
           <h2>Latest articles</h2>
@@ -60,7 +56,7 @@ function index({ posts }) {
 export async function getStaticProps() {
   const { data } = await client.query({
     query: GET_LATEST_POSTS,
-    variables: { type: "life" },
+    variables: { type: "misc" },
   });
 
   return {

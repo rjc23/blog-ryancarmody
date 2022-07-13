@@ -1,8 +1,10 @@
 import React from "react";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { GET_LATEST_POSTS } from "../../graphql/queries";
 import Link from "next/link";
+import Head from "next/head";
 
 const client = new ApolloClient({
   uri: "https://damp-ridge-83493.herokuapp.com/graphql",
@@ -12,13 +14,20 @@ const client = new ApolloClient({
 function index({ posts }) {
   return (
     <div className="code">
+      <Head>
+        <title>Code | BLOG.ryancarmody</title>
+        <meta
+          name="description"
+          content="A blog by Ryan Carmody, Web Developer and Computer Science Tutor"
+        />
+      </Head>
       <Header />
       <div className="stack gap48">
         <div className="stack gap8 items-start">
           <h1>Code</h1>
           <p>
-            Here you can find articles about everything web dev. &apos;I like to
-            write how to&apos;s&apos; about specific topics e.g. Angular 2+,
+            Here you can find articles about everything web dev. I like to write
+            &apos;how to&apos;s&apos; about specific topics e.g. Angular 2+,
             Next.js, Heroku etc, as well as broader topics about the life of a
             web developer.
           </p>
@@ -52,6 +61,7 @@ function index({ posts }) {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

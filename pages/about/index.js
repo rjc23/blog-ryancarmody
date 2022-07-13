@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function About() {
   return (
@@ -91,6 +92,7 @@ function About() {
           </a>
         </Link>
       </div>
+      <Footer />
     </div>
   );
 }

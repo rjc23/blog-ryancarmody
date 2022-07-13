@@ -11,6 +11,7 @@ import Author from "../components/Author/Author";
 import rehypeSlug from "rehype-slug";
 import Contents from "../components/Contents/Contents";
 import Head from "next/head";
+import Footer from "../components/Footer/Footer";
 
 const client = new ApolloClient({
   uri: "https://damp-ridge-83493.herokuapp.com/graphql",
@@ -79,13 +80,21 @@ function Post({
         <Author name="Ryan Carmody" date={date} minsToRead={minsToRead} />
         <h1>{heading}</h1>
         {heroImage !== "" && (
-          <Image src={heroImage} width={300} height={300} alt="Hero image" />
+          <div className="hero-image">
+            <Image
+              src={heroImage}
+              alt="Hero image"
+              layout="fill"
+              className="image"
+            />
+          </div>
         )}
         {showContent && <Contents h2Elements={contents} />}
         <div className="content">
           <MDXRemote {...content} />
         </div>
       </article>
+      <Footer />
     </div>
   );
 }
