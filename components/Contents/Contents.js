@@ -8,12 +8,11 @@ function Contents({ h2Elements }) {
 
   return (
     <div className="contents-top">
-      <h2>Table of Contents</h2>
+      <h2 className="mb-2">Table of Contents</h2>
       <ol>
         {Array.from(h2Elements).map((val, i) => {
           return (
             <li key={i}>
-              {i + 1}.&nbsp;
               <a
                 onClick={() => scrollToElement(val.id)}
                 className="text-sky-800 hover:text-sky-900 dark:text-sky-400 dark:hover:text-sky-500"

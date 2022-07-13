@@ -45,3 +45,13 @@ a, p, button {
 a {
     cursor: pointer;
 }
+
+ol {
+    padding-left: 24px;
+    list-style: decimal;
+    li {
+        margin-bottom: 6px;
+        padding-left: 8px;
+    }
+
+}
