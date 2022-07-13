@@ -86,6 +86,7 @@ function Post({
               alt="Hero image"
               layout="fill"
               className="image"
+              loading="lazy"
             />
           </div>
         )}
