@@ -35,16 +35,17 @@ function Post({
   useEffect(() => {
     updateCodeSyntaxHighlighting();
     updateCaptions();
-  });
+    updateCodeSnippets();
+    updateATags();
+  }, []);
 
   useEffect(() => {
-    const h3Tags = document.querySelectorAll("h3");
+    const h3Tags = document.querySelectorAll("h3, h4");
     if (h3Tags.length > 0) {
       setUserContents(h3Tags);
       setShowContent(true);
     }
     setUrl(window.location.href);
-    console.log(window.location.href);
   }, []);
 
   const updateCodeSyntaxHighlighting = () => {
@@ -56,6 +57,22 @@ function Post({
   const updateCaptions = () => {
     document.querySelectorAll("p.caption").forEach((block) => {
       block.classList.add("text-gray-600", "dark:text-gray-400");
+    });
+  };
+
+  const updateCodeSnippets = () => {
+    document.querySelectorAll("code").forEach((block) => {
+      if (!block.classList.contains("hljs")) {
+        block.classList.add("inline-code");
+      }
+    });
+  };
+
+  const updateATags = () => {
+    document.querySelectorAll("a").forEach((block) => {
+      if (block.classList.length === 0) {
+        block.setAttribute("target", "_blank");
+      }
     });
   };
 

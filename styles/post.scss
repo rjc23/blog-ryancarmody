@@ -37,10 +37,10 @@
             text-decoration: underline;
         }
         .alert {
-            padding: 12px;
-            background-color: #e5b4b4;
-            color: #C53030;
-            border: solid 1px #C53030;
+            padding: 16px;
+            background-color: #ffeeba;
+            color: #856404;
+            border: solid 1px #e4db30;
             border-radius: 6px;
         }
         .inline-code {
@@ -48,6 +48,8 @@
             background-color: hsl(210deg 8% 90%);
             border-radius: 2px;
             padding: 1px 5px;
+            border: none !important;
+            font-size: 16px;
         }
     }
 }
