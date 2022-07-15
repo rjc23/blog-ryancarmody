@@ -120,7 +120,7 @@ function Post({
 export async function getStaticProps({ params }) {
   const options = {
     mdxOptions: {
-      rehypePlugins: [rehypeSlug, rehypeHighlight],
+      rehypePlugins: [rehypeSlug],
     },
   };
 
