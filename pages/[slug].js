@@ -23,36 +23,36 @@ function Post({
   content,
   date,
   minsToRead,
-  // heroImage,
+  heroImage,
   description,
   tags,
-  // socialImage,
+  socialImage,
 }) {
-  // const [contents, setUserContents] = useState([]);
-  // const [showContent, setShowContent] = useState(false);
-  // const [url, setUrl] = useState("");
+  const [contents, setUserContents] = useState([]);
+  const [showContent, setShowContent] = useState(false);
+  const [url, setUrl] = useState("");
 
-  // useEffect(() => {
-  //   updateCodeSyntaxHighlighting();
-  //   updateCaptions();
-  //   updateCodeSnippets();
-  //   updateATags();
-  // }, []);
+  useEffect(() => {
+    updateCodeSyntaxHighlighting();
+    // updateCaptions();
+    // updateCodeSnippets();
+    // updateATags();
+  }, []);
 
-  // useEffect(() => {
-  //   const h3Tags = document.querySelectorAll("h3, h4");
-  //   if (h3Tags.length > 0) {
-  //     setUserContents(h3Tags);
-  //     setShowContent(true);
-  //   }
-  //   setUrl(window.location.href);
-  // }, []);
+  useEffect(() => {
+    const h3Tags = document.querySelectorAll("h3, h4");
+    if (h3Tags.length > 0) {
+      setUserContents(h3Tags);
+      setShowContent(true);
+    }
+    setUrl(window.location.href);
+  }, []);
 
-  // const updateCodeSyntaxHighlighting = () => {
-  //   document.querySelectorAll("pre code").forEach((block) => {
-  //     hljs.highlightElement(block);
-  //   });
-  // };
+  const updateCodeSyntaxHighlighting = () => {
+    document.querySelectorAll("pre code").forEach((block) => {
+      hljs.highlightElement(block);
+    });
+  };
 
   // const updateCaptions = () => {
   //   document.querySelectorAll("p.caption").forEach((block) => {
@@ -79,7 +79,7 @@ function Post({
   return (
     <div>
       <Head>
-        {/* <title>{heading} | BLOG.ryancarmody</title> */}
+        <title>{heading} | BLOG.ryancarmody</title>
         <meta name="description" content={description}></meta>
         <meta name="author" content="Ryan Carmody"></meta>
         <meta name="keywords" content={tags}></meta>
@@ -88,15 +88,15 @@ function Post({
           name="viewport"
         ></meta>
         <meta property="og:title" content={heading} />
-        {/* <meta property="og:url" content={url} /> */}
-        {/* <meta property="og:image" content={socialImage} /> */}
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={socialImage} />
         <meta property="og:type" content="article" />
       </Head>
       <Header />
       <article className="post">
         <Author name="Ryan Carmody" date={date} minsToRead={minsToRead} />
         <h1>{heading}</h1>
-        {/* {heroImage !== "" && (
+        {heroImage !== "" && (
           <div className="hero-image">
             <Image
               src={heroImage}
@@ -107,7 +107,7 @@ function Post({
             />
           </div>
         )}
-        {showContent && <Contents h2Elements={contents} />} */}
+        {showContent && <Contents h2Elements={contents} />}
         <div className="content">
           <MDXRemote {...content} />
         </div>
