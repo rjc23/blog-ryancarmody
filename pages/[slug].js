@@ -107,7 +107,7 @@ function Post({
             />
           </div>
         )}
-        {showContent && <Contents h2Elements={contents} />}
+        {/* {showContent && <Contents h2Elements={contents} />} */}
         <div className="content">
           <MDXRemote {...content} />
         </div>
