@@ -28,9 +28,9 @@ function Post({
   tags,
   socialImage,
 }) {
-  const [contents, setUserContents] = useState([]);
-  const [showContent, setShowContent] = useState(false);
-  const [url, setUrl] = useState("");
+  // const [contents, setUserContents] = useState([]);
+  // const [showContent, setShowContent] = useState(false);
+  // const [url, setUrl] = useState("");
 
   useEffect(() => {
     updateCodeSyntaxHighlighting();
@@ -39,14 +39,14 @@ function Post({
     // updateATags();
   }, []);
 
-  useEffect(() => {
-    const h3Tags = document.querySelectorAll("h3, h4");
-    if (h3Tags.length > 0) {
-      setUserContents(h3Tags);
-      setShowContent(true);
-    }
-    setUrl(window.location.href);
-  }, []);
+  // useEffect(() => {
+  //   const h3Tags = document.querySelectorAll("h3, h4");
+  //   if (h3Tags.length > 0) {
+  //     setUserContents(h3Tags);
+  //     setShowContent(true);
+  //   }
+  //   setUrl(window.location.href);
+  // }, []);
 
   const updateCodeSyntaxHighlighting = () => {
     document.querySelectorAll("pre code").forEach((block) => {
@@ -88,7 +88,7 @@ function Post({
           name="viewport"
         ></meta>
         <meta property="og:title" content={heading} />
-        <meta property="og:url" content={url} />
+        {/* <meta property="og:url" content={url} /> */}
         {/* <meta property="og:image" content={socialImage} /> */}
         <meta property="og:type" content="article" />
       </Head>
