@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "../styles/index.scss";
-import "@code-hike/mdx/dist/index.css";
+// import "@code-hike/mdx/dist/index.css";
+import "../styles/prism.css";
 import { useRouter } from "next/router";
 import { ThemeProvider } from "next-themes";
 
