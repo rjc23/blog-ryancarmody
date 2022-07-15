@@ -33,7 +33,7 @@ function Post({
   // const [url, setUrl] = useState("");
 
   useEffect(() => {
-    updateCodeSyntaxHighlighting();
+    // updateCodeSyntaxHighlighting();
     // updateCaptions();
     // updateCodeSnippets();
     // updateATags();
@@ -48,11 +48,11 @@ function Post({
   //   setUrl(window.location.href);
   // }, []);
 
-  const updateCodeSyntaxHighlighting = () => {
-    document.querySelectorAll("pre code").forEach((block) => {
-      hljs.highlightElement(block);
-    });
-  };
+  // const updateCodeSyntaxHighlighting = () => {
+  //   document.querySelectorAll("pre code").forEach((block) => {
+  //     hljs.highlightElement(block);
+  //   });
+  // };
 
   // const updateCaptions = () => {
   //   document.querySelectorAll("p.caption").forEach((block) => {
