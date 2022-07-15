@@ -28,7 +28,7 @@ function Post({
   tags,
   socialImage,
 }) {
-  // const [contents, setUserContents] = useState([]);
+  const [contents, setUserContents] = useState([]);
   // const [showContent, setShowContent] = useState(false);
   // const [url, setUrl] = useState("");
 
@@ -39,14 +39,14 @@ function Post({
     // updateATags();
   }, []);
 
-  // useEffect(() => {
-  //   const h3Tags = document.querySelectorAll("h3, h4");
-  //   if (h3Tags.length > 0) {
-  //     setUserContents(h3Tags);
-  //     setShowContent(true);
-  //   }
-  //   setUrl(window.location.href);
-  // }, []);
+  useEffect(() => {
+    const h3Tags = document.querySelectorAll("h3, h4");
+    if (h3Tags.length > 0) {
+      setUserContents(h3Tags);
+      setShowContent(true);
+    }
+    setUrl(window.location.href);
+  }, []);
 
   // const updateCodeSyntaxHighlighting = () => {
   //   document.querySelectorAll("pre code").forEach((block) => {
