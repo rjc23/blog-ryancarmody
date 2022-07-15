@@ -1,17 +1,18 @@
 import React, { useEffect, useState, componentDidMount } from "react";
-import Header from "../components/Header/Header";
-import { serialize } from "next-mdx-remote/serialize";
-import hljs from "highlight.js";
-import "highlight.js/styles/devibeans.css"; // import your preferred style
 import Image from "next/image";
+import Head from "next/head";
+
+import Header from "../components/Header/Header";
+import Contents from "../components/Contents/Contents";
+import Footer from "../components/Footer/Footer";
+import Author from "../components/Author/Author";
+
+import { GET_ALL_SLUGS, GET_INDIVIDUAL_POST } from "./../graphql/queries";
+
+import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
-import { GET_ALL_SLUGS, GET_INDIVIDUAL_POST } from "./../graphql/queries";
-import Author from "../components/Author/Author";
 import rehypeSlug from "rehype-slug";
-import Contents from "../components/Contents/Contents";
-import Head from "next/head";
-import Footer from "../components/Footer/Footer";
 
 const client = new ApolloClient({
   uri: process.env.CMS_HOST,
@@ -33,10 +34,9 @@ function Post({
   // const [url, setUrl] = useState("");
 
   useEffect(() => {
-    // updateCodeSyntaxHighlighting();
-    // updateCaptions();
+    updateCaptions();
     // updateCodeSnippets();
-    // updateATags();
+    updateATags();
   }, []);
 
   useEffect(() => {
@@ -48,17 +48,11 @@ function Post({
     // setUrl(window.location.href);
   }, []);
 
-  // const updateCodeSyntaxHighlighting = () => {
-  //   document.querySelectorAll("pre code").forEach((block) => {
-  //     hljs.highlightElement(block);
-  //   });
-  // };
-
-  // const updateCaptions = () => {
-  //   document.querySelectorAll("p.caption").forEach((block) => {
-  //     block.classList.add("text-gray-600", "dark:text-gray-400");
-  //   });
-  // };
+  const updateCaptions = () => {
+    document.querySelectorAll("p.caption").forEach((block) => {
+      block.classList.add("text-gray-600", "dark:text-gray-400");
+    });
+  };
 
   // const updateCodeSnippets = () => {
   //   document.querySelectorAll("code").forEach((block) => {
@@ -68,13 +62,13 @@ function Post({
   //   });
   // };
 
-  // const updateATags = () => {
-  //   document.querySelectorAll("a").forEach((block) => {
-  //     if (block.classList.length === 0) {
-  //       block.setAttribute("target", "_blank");
-  //     }
-  //   });
-  // };
+  const updateATags = () => {
+    document.querySelectorAll("a").forEach((block) => {
+      if (block.classList.length === 0) {
+        block.setAttribute("target", "_blank");
+      }
+    });
+  };
 
   return (
     <div>
