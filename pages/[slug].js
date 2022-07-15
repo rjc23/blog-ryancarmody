@@ -96,7 +96,7 @@ function Post({
       <article className="post">
         <Author name="Ryan Carmody" date={date} minsToRead={minsToRead} />
         <h1>{heading}</h1>
-        {/* {heroImage !== "" && (
+        {heroImage !== "" && (
           <div className="hero-image">
             <Image
               src={heroImage}
@@ -106,8 +106,8 @@ function Post({
               loading="lazy"
             />
           </div>
-        )} */}
-        {/* {showContent && <Contents h2Elements={contents} />} */}
+        )}
+        {showContent && <Contents h2Elements={contents} />}
         <div className="content">
           <MDXRemote {...content} />
         </div>
