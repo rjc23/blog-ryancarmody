@@ -29,7 +29,7 @@ function Post({
   socialImage,
 }) {
   const [contents, setUserContents] = useState([]);
-  // const [showContent, setShowContent] = useState(false);
+  const [showContent, setShowContent] = useState(false);
   // const [url, setUrl] = useState("");
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function Post({
       setUserContents(h3Tags);
       setShowContent(true);
     }
-    setUrl(window.location.href);
+    // setUrl(window.location.href);
   }, []);
 
   // const updateCodeSyntaxHighlighting = () => {
