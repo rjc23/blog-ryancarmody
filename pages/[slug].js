@@ -89,14 +89,14 @@ function Post({
         ></meta>
         <meta property="og:title" content={heading} />
         <meta property="og:url" content={url} />
-        <meta property="og:image" content={socialImage} />
+        {/* <meta property="og:image" content={socialImage} /> */}
         <meta property="og:type" content="article" />
       </Head>
       <Header />
       <article className="post">
         <Author name="Ryan Carmody" date={date} minsToRead={minsToRead} />
         <h1>{heading}</h1>
-        {heroImage !== "" && (
+        {/* {heroImage !== "" && (
           <div className="hero-image">
             <Image
               src={heroImage}
@@ -106,7 +106,7 @@ function Post({
               loading="lazy"
             />
           </div>
-        )}
+        )} */}
         {/* {showContent && <Contents h2Elements={contents} />} */}
         <div className="content">
           <MDXRemote {...content} />
