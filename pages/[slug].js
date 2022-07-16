@@ -1,4 +1,4 @@
-import React, { useEffect, useState, componentDidMount } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Head from "next/head";
 
@@ -13,8 +13,6 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import rehypeSlug from "rehype-slug";
-import mdxPrism from "mdx-prism";
-import rehypeHighlight from "rehype-highlight";
 
 import remarkAutolinkHeadings from "remark-autolink-headings";
 
@@ -87,10 +85,6 @@ function Post({
         {/* <meta property="og:url" content={url} /> */}
         {/* <meta property="og:image" content={socialImage} /> */}
         <meta property="og:type" content="article" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/vs2015.min.css"
-        ></link>
       </Head>
       <Header />
       <article className="post">
