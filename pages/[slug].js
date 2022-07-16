@@ -13,10 +13,6 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import rehypeSlug from "rehype-slug";
-import mdxPrism from "mdx-prism";
-import rehypeHighlight from "rehype-highlight";
-
-import remarkAutolinkHeadings from "remark-autolink-headings";
 
 const client = new ApolloClient({
   uri: process.env.CMS_HOST,
@@ -87,10 +83,6 @@ function Post({
         {/* <meta property="og:url" content={url} /> */}
         {/* <meta property="og:image" content={socialImage} /> */}
         <meta property="og:type" content="article" />
-        {/* <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/xt256.min.css"
-        ></link> */}
       </Head>
       <Header />
       <article className="post">
@@ -120,7 +112,7 @@ function Post({
 export async function getStaticProps({ params }) {
   const options = {
     mdxOptions: {
-      rehypePlugins: [rehypeSlug, rehypeHighlight],
+      rehypePlugins: [rehypeSlug],
     },
   };
 
